@@ -1,0 +1,11 @@
+# mac os
+.DS_Store
+
+# dotnet build
+bin
+obj
+Bin
+Obj
+
+# vs code
+.vscode

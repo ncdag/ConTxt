@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ConTxt Browser</title>
+    </head>
+    <body>
+        
+        <h1>1 - User Guide</h1>
+        <p>ConTxt is a text-based web browser that runs in the command line console.</p>
+        <h3>1.1 - Commands</h3>
+        <p>
+            ConTxt responds to user input commands you provide in
+            the terminal while the program is running.
+        </p>
+        <ul>
+            <li><i>Empty string <pre>/</pre> return key</i> <b>=></b> While on a page, read the next console-length of content to the screen.</li>
+            <li><i>'Help' <pre>or</pre> 'h' <pre>command</pre></i> <b>=></b> Open this page to reread the instructions.</li>
+            <li><i>'Back' <pre>or</pre> '&lt;' <pre>command</pre></i> <b>=></b> Navigate backward in page history.</li>
+            <li><i>'Forward' <pre>or</pre> '&gt;' <pre>command</pre></i> <b>=></b> Navigate forward in page history.</li>
+            <li><i>'Exit' <pre>or</pre> 'bye' <pre>command</pre></i> <b>=></b> Close the program and return to the shell.</li>
+            <li><i>Hexadecimal number</i> <b>=></b> Navigates to the link with that number shown in curly brackets following it. For example, the following text is a link to <a href="https://en.wikipedia.org/wiki/HTML">Wikipedia's page on HTML</a>.
+            You would type the number 1 into the console, and then press enter, in order to navigate to that link's page. </li>
+            <li><i>String not listed above</i> <b>=></b> Search the web with the string as the keywords, using the search engine specified in Settings.xml (default is DuckDuckGo).</li>
+        </ul>
+        <h3>1.2 - Configuration</h3>
+        <p>
+            You can customize ConTxt by editing the <b>Settings.xml</b> file located in the same directory as this application.
+            The list below describes what the inner text value of each element in the heirarchy is.
+        </p>
+        <ul>
+            <li>
+                <pre>/</pre><i>settings<pre>/</pre>web<pre>/</pre>contentlanguage</i> <b>=></b> two-letter abbreviation for the language you want sites to send content in, e.g. en for English, es for Spanish.</i>
+            </li>
+            <li>
+                <pre>/</pre><i>settings<pre>/</pre>navigation<pre>/</pre>trustedoriginsstringlist</i><pre>/</pre><i>origin</i> <b>=></b> site origin which you trust not to serve content which would harm your computer or steal your data.
+                Manually listing a site here will tell ConTxt to skip the step of asking for your permission to navigate to that listed site if you have not yet visited it this browsing session.
+            </i>
+            <li>
+                <pre>/</pre><i>settings<pre>/</pre>navigation<pre>/</pre>searchbaseurl</i> <b>=></b> the base URL of the desired web search service, e.g. DuckDuckGo. 
+            </i>
+            <li>
+                <pre>/</pre><i>settings<pre>/</pre>navigation<pre>/</pre>searchqueryargname</i> <b>=></b> the query string argument name used by the above search service for submitting new search keywords.
+            </i>
+            <li>
+                <pre>/</pre><i>settings<pre>/</pre>console<pre>/</pre>textbodypadding</i> <b>=></b> number of character cells you want to leave empty as padding between content and the left and right edges of the console window.
+            </i>
+            <li>
+                <pre>/</pre><i>settings<pre>/</pre>general<pre>/</pre>loglevel</i> <b>=></b> for troubleshooting the application. Higher positive integer values will log more information.
+            </i>
+            </li>
+        </ul>
+        <h1>2 - Getting started</h1>
+        <p>Type in search keywords and press enter to search the web. Then, enter the hexadecimal number which follows the link result you want to follow.</p>
+    </body>
+</html>

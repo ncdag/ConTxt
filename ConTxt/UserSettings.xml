@@ -1,0 +1,20 @@
+<settings>
+    <general>
+        <loglevel help="0:none, 1:error, 2:warning, 3:debug, 4:trace. Higher levels include all lower levels">1</loglevel> 
+    </general>
+    <web>
+        <contentlanguage help="en for English, es for Spanish, etc.">en</contentlanguage>
+    </web>
+    <navigation>
+        <searchbaseurl help="search provider's base url">https://lite.duckduckgo.com/lite</searchbaseurl>
+        <searchqueryargname help="search provider's query string argument for search keywords">q</searchqueryargname>
+        <trustedoriginsstringlist help="each child element of this element may contain in its inner text an origin you trust not to serve malicious content.">
+            <origin>https://lite.duckduckgo.com:443</origin>
+            <origin>https://duckduckgo.com:443</origin>
+            <origin>https://en.wikipedia.org:443</origin>
+        </trustedoriginsstringlist>
+    </navigation>
+    <console>
+        <textbodypadding help="number of character cells of empty space between console vertical edges and web content">4</textbodypadding>
+    </console>
+</settings>
