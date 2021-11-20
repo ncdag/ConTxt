@@ -57,14 +57,8 @@ namespace WebBrowser
             savedConsoleCursorY = Console.CursorTop;
         }
         public void setCursorPosition(int newX, int newY){
-
-            if (newX >= 0 && newY >= 0 && newX <= Console.WindowWidth && newY <= Console.WindowHeight){
-                Console.CursorLeft = newX;
-                Console.CursorTop = newY;
-            }
-            else{
-                printError($"Invalid console position to restore: [{newX},{newY}]. Range is [0,0] to [{Console.WindowWidth},{Console.WindowHeight}]");
-            }
+            Console.CursorLeft = newX;
+            Console.CursorTop = newY;
         }
         public string getLineOfUserInputAndMoveBackTheCursorBackToWhereItWas(){
             // readline is wrapped in a backup-restore of the cursor position
